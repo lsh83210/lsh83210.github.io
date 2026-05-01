@@ -1,0 +1,66 @@
+sanghyun:
+  first_name: Sanghyun
+  last_name: Lee
+  is_me: true
+
+shkim:
+  first_name: Seungryong
+  last_name: Kim
+  website: https://cvlab.kaist.ac.kr/
+
+jcye:
+  first_name: Jong
+  middle_name: Chul
+  last_name: Ye
+  website: https://bispl.weebly.com/
+
+chong:
+  first_name: Chunsan
+  last_name: Hong
+dahn:
+  first_name: Donghoon
+  last_name: Ahn
+jkang:
+  first_name: Jiwon
+  last_name: Kang
+jmin:
+  first_name: Jaewon
+  last_name: Min
+mkim:
+  first_name: Minjae
+  last_name: Kim
+wjang:
+  first_name: Wooseok
+  last_name: Jang
+slee2:
+  first_name: Saungwu
+  last_name: Lee
+spaul:
+  first_name: Sayak
+  last_name: Paul
+  website: https://sayak.dev
+shong:
+  first_name: Susung
+  last_name: Hong
+hcho:
+  first_name: Hyoungwon
+  last_name: Cho
+seonhwakim:
+  first_name: SeonHwa
+  last_name: Kim
+eunjucha:
+  first_name: Eunju
+  last_name: Cha
+kyonghwanjin:
+  first_name: Kyong
+  middle_name: Hwan
+  last_name: Jin
+sunwookim:
+  first_name: Sunwoo
+  last_name: Kim
+jpark:
+  first_name: Jongho
+  last_name: Park
+dpark:
+  first_name: Dongmin
+  last_name: Park

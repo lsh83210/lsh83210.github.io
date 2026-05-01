@@ -1,0 +1,39 @@
+- id: marble-nov-12
+  title: "Marble: A Multimodal World Model"
+  organization: "World Labs"
+  date: "November 2025"
+  description: "A frontier multimodal world model."
+  url: "https://www.worldlabs.ai/blog/marble-world-model"
+  image: "marble-before.png"
+  video: "marble-after.mp4"
+
+- id: rtfm-oct-16
+  title: "Real-Time Frame Model"
+  organization: "World Labs"
+  date: "October 2025"
+  description: "Explore generated worlds in real-time."
+  url: "https://www.worldlabs.ai/blog/rtfm"
+  image: "rtfm-before.png"
+  video: "rtfm-after.mp4"
+
+- id: world-labs-dec2024
+  title: "Generating Worlds"
+  organization: "World Labs"
+  date: "December 2024"
+  description: "Transform a single image into an explorable 3D world using generative AI."
+  url: "https://www.worldlabs.ai/blog/generating-worlds"
+  image: "world-labs.jpg"
+  video: "worldlabs-dec2.mp4"
+
+- id: google-3d-shopping-may2025
+  title: "Generating 3D Products"
+  organization: "Google Research"
+  date: "May 2025"
+  description: "Transforming photos into shoppable 3D products."
+  url: "https://research.google/blog/bringing-3d-shoppable-products-online-with-generative-ai/"
+  image: "google-3d-shopping.jpg"
+  video: "google-3d-products.mp4"
+  tags:
+    - "Generative AI"
+    - "3D Reconstruction"
+    - "Computer Vision"

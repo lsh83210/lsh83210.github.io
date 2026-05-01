@@ -1,0 +1,68 @@
+- id: lookahead_unmasking
+  title: "Lookahead Unmasking Elicits Accurate Decoding in Diffusion Language Models"
+  venue: "ICML, 2026"
+  description: ""
+  arxiv: 2511.05563
+  authors:
+    - sanghyun
+    - shkim
+    - jpark
+    - dpark
+
+- id: unifying_masked_diffusion
+  title: "Unifying Masked Diffusion Models with Various Generation Orders and Beyond"
+  venue: "ICML, 2026 (Spotlight)"
+  description: ""
+  arxiv: 2602.02112
+  authors:
+    - chong
+    - sanghyun
+    - jcye
+
+- id: effective_test_time_scaling
+  title: "Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement"
+  venue: "arXiv"
+  description: ""
+  arxiv: 2511.05562
+  authors:
+    - sanghyun
+    - sunwookim
+    - shkim
+    - jpark
+    - dpark
+
+- id: fine_grained_perturbation
+  title: "Fine-Grained Perturbation Guidance via Attention Head Selection"
+  venue: "NeurIPS, 2025"
+  description: ""
+  arxiv: 2506.10978
+  authors:
+    - dahn
+    - jkang
+    - sanghyun
+    - mkim
+    - jmin
+    - wjang
+    - slee2
+    - spaul
+    - shong
+    - shkim
+
+- id: noise_worth_diffusion_guidance
+  title: "A Noise Is Worth Diffusion Guidance"
+  venue: "ICLR, 2024"
+  description: ""
+  arxiv: 2412.03895
+  authors:
+    - dahn
+    - jkang
+    - sanghyun
+    - jmin
+    - mkim
+    - wjang
+    - hcho
+    - spaul
+    - seonhwakim
+    - eunjucha
+    - kyonghwanjin
+    - shkim

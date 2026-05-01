@@ -1,0 +1,87 @@
+---
+layout: default
+title: Keunhong Park
+---
+
+<!-- Hero Section -->
+<section class="py-12 md:py-16 bg-surface">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-8">
+      <!-- Portrait -->
+      <div class="flex-shrink-0">
+        <img src="{{ '/images/portrait.jpg' | relative_url }}"
+             alt="{{ site.name }}"
+             class="w-48 h-48 md:w-56 md:h-56 object-cover">
+      </div>
+
+      <!-- Bio -->
+      <div class="flex-1">
+        <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">
+          Hello, I'm {{ site.name }}
+        </h1>
+        <div class="text-text-body mt-4 max-w-prose leading-relaxed prose">
+          {{ site.description | markdownify }}
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+          <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
+            <i class="ai ai-google-scholar mr-1.5"></i>
+            Scholar
+          </a>
+          <a href="https://www.linkedin.com/in/sanghyun-lee-2aa58b286/?skipRedirect=true" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
+            {% include icons/linkedin.html class="w-4 h-4 mr-1.5" %}
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section class="py-12 md:py-16">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-display text-2xl font-semibold text-text mb-6">Experience</h2>
+    {% for job in site.data.employment %}
+    <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
+      <div class="flex-1">
+        <p class="font-semibold">{{ job.company }}</p>
+        <p class="text-text-body text-sm">{{ job.description }}</p>
+      </div>
+      <div class="text-text-muted text-sm md:text-right flex-shrink-0">
+        {{ job.dates }}<br>
+        {{ job.location }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Education Section -->
+<section class="py-12 md:py-16 bg-surface-muted">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-display text-2xl font-semibold text-text mb-6">Education</h2>
+    {% for school in site.data.education %}
+    <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
+      <div class="flex-1">
+        <p class="font-semibold">{{ school.name }}</p>
+        <p class="text-text-body text-sm">{{ school.description }}</p>
+      </div>
+      <div class="text-text-muted text-sm md:text-right flex-shrink-0">
+        {{ school.dates }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Publications Section -->
+<section class="py-12 md:py-16 bg-surface">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="font-display text-2xl font-semibold text-text mb-8">Publications</h2>
+    {% for pub in site.data.publications %}
+      {% include publication.html pub=pub %}
+    {% endfor %}
+  </div>
+</section>
