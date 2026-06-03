@@ -31,12 +31,16 @@
     <p class="text-text-body text-sm mt-1.5">
       {% for author_id in include.pub.authors %}
         {% assign author = site.data.authors[author_id] %}
+        {% assign is_equal_contributor = false %}
+        {% if include.pub.equal_contributors contains author_id %}
+          {% assign is_equal_contributor = true %}
+        {% endif %}
         {% if author.is_me %}
-          <span class="font-semibold text-text">{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}</span>{% unless forloop.last %}, {% endunless %}
+          <span class="font-semibold text-text">{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% if is_equal_contributor %}<sup>*</sup>{% endif %}</span>{% unless forloop.last %}, {% endunless %}
         {% elsif author.website %}
-          <a href="{{ author.website }}" class="hover:text-text">{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}</a>{% unless forloop.last %}, {% endunless %}
+          <a href="{{ author.website }}" class="hover:text-text">{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% if is_equal_contributor %}<sup>*</sup>{% endif %}</a>{% unless forloop.last %}, {% endunless %}
         {% else %}
-          <span>{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}</span>{% unless forloop.last %}, {% endunless %}
+          <span>{{ author.first_name }}{% if author.middle_name %} {{ author.middle_name }}{% endif %} {{ author.last_name }}{% if is_equal_contributor %}<sup>*</sup>{% endif %}</span>{% unless forloop.last %}, {% endunless %}
         {% endif %}
       {% endfor %}
       {% if include.pub.with_collaborators %}

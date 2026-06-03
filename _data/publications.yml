@@ -1,3 +1,34 @@
+- id: understanding_accelerating_masked_diffusion
+  title: "Understanding and Accelerating the Training of Masked Diffusion Language Models"
+  venue: "arXiv"
+  description: ""
+  arxiv: 2605.13026
+  equal_contributors:
+    - chong
+    - sanghyun
+  authors:
+    - chong
+    - sanghyun
+    - chlai
+    - shayakawa
+    - ytakida
+    - ymitsufuji
+    - shkim
+    - jcye
+
+- id: looped_diffusion_language_models
+  title: "Looped Diffusion Language Models"
+  venue: "arXiv"
+  description: ""
+  arxiv: 2605.26106
+  authors:
+    - sanghyun
+    - chong
+    - shkim
+    - jhlee
+    - jpark
+    - dpark
+
 - id: lookahead_unmasking
   title: "Lookahead Unmasking Elicits Accurate Decoding in Diffusion Language Models"
   venue: "ICML, 2026"
@@ -21,7 +52,7 @@
 
 - id: effective_test_time_scaling
   title: "Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement"
-  venue: "arXiv"
+  venue: "ICML workshop, 2026"
   description: ""
   arxiv: 2511.05562
   authors:
@@ -50,7 +81,7 @@
 
 - id: noise_worth_diffusion_guidance
   title: "A Noise Is Worth Diffusion Guidance"
-  venue: "ICLR, 2024"
+  venue: "ICLR, 2026"
   description: ""
   arxiv: 2412.03895
   authors:
