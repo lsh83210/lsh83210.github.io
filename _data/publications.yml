@@ -67,6 +67,9 @@
   venue: "NeurIPS, 2025"
   description: ""
   arxiv: 2506.10978
+  equal_contributors:
+    - dahn
+    - jkang
   authors:
     - dahn
     - jkang
@@ -84,6 +87,9 @@
   venue: "ICLR, 2026"
   description: ""
   arxiv: 2412.03895
+  equal_contributors:
+    - dahn
+    - jkang
   authors:
     - dahn
     - jkang
