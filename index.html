@@ -4,37 +4,44 @@ title: Sanghyun Lee
 ---
 
 <!-- Hero Section -->
-<section class="py-12 md:py-16 bg-surface">
+<section class="pt-14 pb-12 md:pt-20 md:pb-16">
   <div class="max-w-4xl mx-auto px-6">
-    <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-8">
+    <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start gap-10">
       <!-- Portrait -->
       <div class="flex-shrink-0">
         <img src="{{ '/images/portrait.jpg' | relative_url }}"
              alt="{{ site.name }}"
-             class="w-48 h-48 md:w-56 md:h-56 object-cover">
+             class="w-44 h-44 md:w-52 md:h-52 object-cover object-center rounded-2xl shadow-sm ring-1 ring-border">
       </div>
 
       <!-- Bio -->
       <div class="flex-1">
-        <h1 class="font-display text-3xl md:text-4xl font-semibold text-text">
-          Hello, I'm {{ site.name }}
+        <h1 class="font-display text-4xl md:text-5xl font-semibold text-text tracking-tight">
+          {{ site.name }}
         </h1>
-        <div class="text-text-body mt-4 max-w-prose leading-relaxed prose">
+        <p class="font-sans text-sm text-text-muted mt-2">
+          {{ site.position }} · <a href="https://cvlab.kaist.ac.kr/" class="no-underline text-accent hover:text-link-hover">KAIST CVLAB</a>
+        </p>
+        <div class="text-text-body mt-5 max-w-prose leading-relaxed prose">
           {{ site.description | markdownify }}
         </div>
 
         <!-- Links -->
-        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
-          <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            <i class="ai ai-google-scholar mr-1.5"></i>
+        <div class="flex flex-wrap justify-center md:justify-start gap-2 mt-6 font-sans text-sm">
+          <a href="mailto:{{ site.email }}" class="pill no-underline">
+            {% include icons/envelope.html class="w-4 h-4" %}
+            Email
+          </a>
+          <a href="https://scholar.google.com/citations?user={{ site.google_scholar }}" class="pill no-underline">
+            <i class="ai ai-google-scholar"></i>
             Scholar
           </a>
-          <a href="https://www.linkedin.com/in/sanghyun-lee-2aa58b286/?skipRedirect=true" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            {% include icons/linkedin.html class="w-4 h-4 mr-1.5" %}
+          <a href="https://www.linkedin.com/in/sanghyun-lee-2aa58b286/?skipRedirect=true" class="pill no-underline">
+            {% include icons/linkedin.html class="w-4 h-4" %}
             LinkedIn
           </a>
-          <a href="{{ '/assets/autoCV.pdf' | relative_url }}" class="inline-flex items-center text-text-muted hover:text-text font-sans text-sm no-underline">
-            {% include icons/document.html class="w-4 h-4 mr-1.5" %}
+          <a href="{{ '/assets/autoCV.pdf' | relative_url }}" class="pill no-underline">
+            {% include icons/document.html class="w-4 h-4" %}
             CV
           </a>
         </div>
@@ -43,49 +50,62 @@ title: Sanghyun Lee
   </div>
 </section>
 
-<!-- Experience Section -->
-<section class="py-12 md:py-16">
+<!-- News Section -->
+<section id="news" class="py-12 md:py-14 bg-surface-muted border-y border-border-subtle">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-6">Experience</h2>
-    {% for job in site.data.employment %}
-    <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
-      <div class="flex-1">
-        <p class="font-semibold">{{ job.company }}</p>
-        <p class="text-text-body text-sm">{{ job.description }}</p>
-      </div>
-      <div class="text-text-muted text-sm md:text-right flex-shrink-0">
-        {{ job.dates }}<br>
-        {{ job.location }}
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- Education Section -->
-<section class="py-12 md:py-16 bg-surface-muted">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-6">Education</h2>
-    {% for school in site.data.education %}
-    <div class="flex flex-col md:flex-row md:justify-between gap-1 mb-4">
-      <div class="flex-1">
-        <p class="font-semibold">{{ school.name }}</p>
-        <p class="text-text-body text-sm">{{ school.description }}</p>
-      </div>
-      <div class="text-text-muted text-sm md:text-right flex-shrink-0">
-        {{ school.dates }}
-      </div>
-    </div>
-    {% endfor %}
+    <h2 class="section-title">News</h2>
+    <ul class="space-y-3">
+      {% for item in site.data.news %}
+      <li class="grid sm:grid-cols-[5.5rem_1fr] gap-x-4 gap-y-0.5 items-baseline">
+        <span class="font-sans text-xs font-semibold uppercase tracking-wider text-text-muted">{{ item.date }}</span>
+        <div class="news-item text-text-body">{{ item.description | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+      </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
 
 <!-- Publications Section -->
-<section class="py-12 md:py-16 bg-surface">
+<section id="publications" class="py-12 md:py-16">
   <div class="max-w-4xl mx-auto px-6">
-    <h2 class="font-display text-2xl font-semibold text-text mb-8">Publications</h2>
-    {% for pub in site.data.publications %}
-      {% include publication.html pub=pub %}
-    {% endfor %}
+    <div class="flex items-baseline justify-between gap-4 mb-4">
+      <h2 class="section-title mb-0">Publications</h2>
+      <p class="font-sans text-xs text-text-muted">* Equal contribution</p>
+    </div>
+    <div class="divide-y divide-border-subtle">
+      {% for pub in site.data.publications %}
+        {% include publication.html pub=pub %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Experience & Education -->
+<section id="background" class="py-12 md:py-16 bg-surface-muted border-t border-border-subtle">
+  <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="section-title">Experience</h2>
+      <ol class="timeline">
+        {% for job in site.data.employment %}
+        <li>
+          <p class="font-sans text-xs font-semibold uppercase tracking-wider text-text-muted">{{ job.dates }} · {{ job.location }}</p>
+          <p class="font-semibold text-text mt-1">{{ job.company }}</p>
+          <p class="text-text-body text-sm">{{ job.description }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+    <div>
+      <h2 class="section-title">Education</h2>
+      <ol class="timeline">
+        {% for school in site.data.education %}
+        <li>
+          <p class="font-sans text-xs font-semibold uppercase tracking-wider text-text-muted">{{ school.dates }}</p>
+          <p class="font-semibold text-text mt-1">{{ school.name }}</p>
+          <p class="text-text-body text-sm">{{ school.description }}</p>
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
   </div>
 </section>

@@ -18,9 +18,14 @@
   --color-border-subtle: #f0f0f0;
 
   /* Link colors */
-  --color-link: #666666;
-  --color-link-hover: #171717;
-  --color-link-underline: #d4d4d4;
+  --color-link: #3a55a4;
+  --color-link-hover: #1e3478;
+  --color-link-underline: #c5cfea;
+
+  /* Accent */
+  --color-accent: #3a55a4;
+  --color-accent-soft: #eef1fa;
+  --color-accent-border: #d5dcf0;
 
   /* Fonts */
   --font-serif: 'Crimson Pro', Georgia, Cambria, serif;
@@ -28,8 +33,31 @@
   --font-sans: 'Source Sans 3', system-ui, sans-serif;
 }
 
+/* Dark mode: override the theme tokens; utilities read these variables */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --color-surface: #121416;
+    --color-surface-alt: #171a1d;
+    --color-surface-muted: #181b1f;
+    --color-text: #eceae6;
+    --color-text-body: #c4c2bd;
+    --color-text-muted: #94928d;
+    --color-text-subtle: #6b6a67;
+    --color-border: #2b2f34;
+    --color-border-subtle: #22262a;
+    --color-link: #9db4f2;
+    --color-link-hover: #c9d6fb;
+    --color-link-underline: #3d4a6e;
+    --color-accent: #9db4f2;
+    --color-accent-soft: #1c2336;
+    --color-accent-border: #2e3a5c;
+  }
+}
+
 @layer base {
   html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
     font-family: var(--font-serif);
     font-size: 18px;
     line-height: 1.65;
@@ -61,25 +89,26 @@
     color: var(--color-link-hover);
   }
 
-  /* Prose typography customization - CSS variables */
-  .prose {
-    --tw-prose-body: var(--color-text-body);
-    --tw-prose-headings: var(--color-text);
-    --tw-prose-lead: var(--color-text-muted);
-    --tw-prose-links: var(--color-link);
-    --tw-prose-bold: var(--color-text);
-    --tw-prose-counters: var(--color-text-muted);
-    --tw-prose-bullets: var(--color-text-muted);
-    --tw-prose-hr: var(--color-border);
-    --tw-prose-quotes: var(--color-text-body);
-    --tw-prose-quote-borders: var(--color-border);
-    --tw-prose-captions: var(--color-text-muted);
-    --tw-prose-code: var(--color-text);
-    --tw-prose-pre-code: var(--color-surface);
-    --tw-prose-pre-bg: var(--color-text);
-    --tw-prose-th-borders: var(--color-border);
-    --tw-prose-td-borders: var(--color-border-subtle);
-  }
+}
+
+/* Prose typography customization - unlayered so it overrides the plugin defaults */
+.prose {
+  --tw-prose-body: var(--color-text-body);
+  --tw-prose-headings: var(--color-text);
+  --tw-prose-lead: var(--color-text-muted);
+  --tw-prose-links: var(--color-link);
+  --tw-prose-bold: var(--color-text);
+  --tw-prose-counters: var(--color-text-muted);
+  --tw-prose-bullets: var(--color-text-muted);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-text-body);
+  --tw-prose-quote-borders: var(--color-border);
+  --tw-prose-captions: var(--color-text-muted);
+  --tw-prose-code: var(--color-text);
+  --tw-prose-pre-code: var(--color-surface);
+  --tw-prose-pre-bg: var(--color-text);
+  --tw-prose-th-borders: var(--color-border);
+  --tw-prose-td-borders: var(--color-border-subtle);
 }
 
 /* Prose link overrides - subtle grey underlines like rest of site */
@@ -110,5 +139,79 @@
   a {
     text-decoration: none !important;
     color: inherit !important;
+  }
+}
+
+/* Components */
+@layer components {
+  .section-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+    margin-bottom: 1.25rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-body) !important;
+    transition: border-color 150ms, color 150ms, background-color 150ms;
+  }
+  .pill:hover {
+    border-color: var(--color-accent-border);
+    background: var(--color-accent-soft);
+    color: var(--color-accent) !important;
+  }
+
+  .venue {
+    display: inline-block;
+    padding: 0.1rem 0.55rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+    background: var(--color-surface-muted);
+    border: 1px solid var(--color-border);
+  }
+  .venue-main {
+    color: var(--color-accent);
+    background: var(--color-accent-soft);
+    border-color: var(--color-accent-border);
+  }
+
+  .news-item strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .timeline {
+    border-left: 2px solid var(--color-border);
+    padding-left: 1.25rem;
+  }
+  .timeline > li {
+    position: relative;
+    padding-bottom: 1.25rem;
+  }
+  .timeline > li:last-child {
+    padding-bottom: 0;
+  }
+  .timeline > li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.25rem - 6px);
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-accent);
   }
 }

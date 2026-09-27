@@ -1,24 +1,6 @@
-- id: understanding_accelerating_masked_diffusion
-  title: "Understanding and Accelerating the Training of Masked Diffusion Language Models"
-  venue: "arXiv"
-  description: ""
-  arxiv: 2605.13026
-  equal_contributors:
-    - chong
-    - sanghyun
-  authors:
-    - chong
-    - sanghyun
-    - chlai
-    - shayakawa
-    - ytakida
-    - ymitsufuji
-    - shkim
-    - jcye
-
 - id: looped_diffusion_language_models
   title: "Looped Diffusion Language Models"
-  venue: "arXiv"
+  venue: "NeurIPS, 2026"
   description: ""
   arxiv: 2605.26106
   authors:
@@ -61,6 +43,24 @@
     - shkim
     - jpark
     - dpark
+
+- id: understanding_accelerating_masked_diffusion
+  title: "Understanding and Accelerating the Training of Masked Diffusion Language Models"
+  venue: "ICML workshop, 2026"
+  description: ""
+  arxiv: 2605.13026
+  equal_contributors:
+    - chong
+    - sanghyun
+  authors:
+    - chong
+    - sanghyun
+    - chlai
+    - shayakawa
+    - ytakida
+    - ymitsufuji
+    - shkim
+    - jcye
 
 - id: fine_grained_perturbation
   title: "Fine-Grained Perturbation Guidance via Attention Head Selection"

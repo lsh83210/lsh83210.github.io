@@ -1,12 +1,18 @@
-<header class="py-4 bg-surface">
+<header class="sticky top-0 z-50 bg-surface/85 backdrop-blur-md border-b border-border-subtle">
   <div class="max-w-4xl mx-auto px-6">
-    <nav class="flex items-center justify-center">
-      <ul class="flex items-center gap-6 text-sm font-sans">
-        <li>
-          <a href="{{ '/' | relative_url }}" class="text-text-muted no-underline hover:text-text {% if page.url == '/' %}text-text font-bold{% endif %}">
-            Home
-          </a>
-        </li>
+    <nav class="flex items-center justify-between h-14 font-sans text-sm">
+      <a href="{{ '/' | relative_url }}" class="no-underline font-semibold text-text hover:text-accent tracking-tight">
+        {{ site.name }}
+      </a>
+      <ul class="flex items-center gap-5">
+        {% if page.url == '/' %}
+        <li class="hidden sm:block"><a href="#news" class="no-underline text-text-muted hover:text-text">News</a></li>
+        <li><a href="#publications" class="no-underline text-text-muted hover:text-text">Publications</a></li>
+        <li class="hidden sm:block"><a href="#background" class="no-underline text-text-muted hover:text-text">Background</a></li>
+        {% else %}
+        <li><a href="{{ '/' | relative_url }}" class="no-underline text-text-muted hover:text-text">Home</a></li>
+        {% endif %}
+        <li><a href="{{ '/assets/autoCV.pdf' | relative_url }}" class="no-underline text-text-muted hover:text-text">CV</a></li>
       </ul>
     </nav>
   </div>
