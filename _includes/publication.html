@@ -1,10 +1,11 @@
 <div class="flex flex-col md:flex-row gap-6 py-6 first:pt-2">
   {% if include.pub.image %}
   <!-- Thumbnail -->
-  <div class="w-full md:w-1/5 flex-shrink-0">
-    <div class="publication-mousecell relative overflow-hidden rounded-lg aspect-square">
+  <div class="w-40 md:w-36 flex-shrink-0">
+    <div class="publication-mousecell relative overflow-hidden rounded-lg aspect-square bg-white ring-1 ring-border">
       <img src="{{ '/images/' | append: include.pub.image | relative_url }}"
            alt="{{ include.pub.title }}"
+           loading="lazy"
            class="w-full h-full object-cover">
       {% if include.pub.image_mouseover %}
       <video src="{{ '/images/' | append: include.pub.image_mouseover | relative_url }}"

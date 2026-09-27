@@ -1,4 +1,5 @@
 - id: looped_diffusion_language_models
+  image: "pubs/looped_diffusion_language_models.jpg"
   title: "Looped Diffusion Language Models"
   venue: "NeurIPS, 2026"
   description: ""
@@ -12,6 +13,7 @@
     - dpark
 
 - id: lookahead_unmasking
+  image: "pubs/lookahead_unmasking.jpg"
   title: "Lookahead Unmasking Elicits Accurate Decoding in Diffusion Language Models"
   venue: "ICML, 2026"
   description: ""
@@ -23,6 +25,7 @@
     - dpark
 
 - id: unifying_masked_diffusion
+  image: "pubs/unifying_masked_diffusion.jpg"
   title: "Unifying Masked Diffusion Models with Various Generation Orders and Beyond"
   venue: "ICML, 2026 (Spotlight)"
   description: ""
@@ -33,6 +36,7 @@
     - jcye
 
 - id: effective_test_time_scaling
+  image: "pubs/effective_test_time_scaling.jpg"
   title: "Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement"
   venue: "ICML workshop, 2026"
   description: ""
@@ -45,6 +49,7 @@
     - dpark
 
 - id: understanding_accelerating_masked_diffusion
+  image: "pubs/understanding_accelerating_masked_diffusion.jpg"
   title: "Understanding and Accelerating the Training of Masked Diffusion Language Models"
   venue: "ICML workshop, 2026"
   description: ""
@@ -62,27 +67,8 @@
     - shkim
     - jcye
 
-- id: fine_grained_perturbation
-  title: "Fine-Grained Perturbation Guidance via Attention Head Selection"
-  venue: "NeurIPS, 2025"
-  description: ""
-  arxiv: 2506.10978
-  equal_contributors:
-    - dahn
-    - jkang
-  authors:
-    - dahn
-    - jkang
-    - sanghyun
-    - mkim
-    - jmin
-    - wjang
-    - slee2
-    - spaul
-    - shong
-    - shkim
-
 - id: noise_worth_diffusion_guidance
+  image: "pubs/noise_worth_diffusion_guidance.jpg"
   title: "A Noise Is Worth Diffusion Guidance"
   venue: "ICLR, 2026"
   description: ""
@@ -102,4 +88,25 @@
     - seonhwakim
     - eunjucha
     - kyonghwanjin
+    - shkim
+
+- id: fine_grained_perturbation
+  image: "pubs/fine_grained_perturbation.jpg"
+  title: "Fine-Grained Perturbation Guidance via Attention Head Selection"
+  venue: "NeurIPS, 2025"
+  description: ""
+  arxiv: 2506.10978
+  equal_contributors:
+    - dahn
+    - jkang
+  authors:
+    - dahn
+    - jkang
+    - sanghyun
+    - mkim
+    - jmin
+    - wjang
+    - slee2
+    - spaul
+    - shong
     - shkim

@@ -1,0 +1,238 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+% CV Template
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+\documentclass[a4paper,10.5pt]{article}
+
+%----------------------------------------------------------------------------------------
+%    PACKAGES
+%----------------------------------------------------------------------------------------
+
+\usepackage{url}
+\usepackage{parskip}
+
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\usepackage{fontawesome5}
+\usepackage{academicons}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{
+    colorlinks,
+    breaklinks,
+    urlcolor=linkcolour,
+    linkcolor=linkcolour
+}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM ENVIRONMENTS
+%----------------------------------------------------------------------------------------
+
+\newenvironment{educationlong}[5]
+{
+    \noindent
+    \begin{tabularx}{\linewidth}{@{} l X r @{}}
+    \textbf{#1} & \hfill & #2 \\
+    #3 & \hfill & #4 \\
+    #5 & \hfill &
+    \end{tabularx}
+    \par\nobreak
+}
+{
+}
+
+%----------------------------------------------------------------------------------------
+%    BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%    TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Sanghyun Lee} \\[7.5pt]
+
+
+\href{https://lsh83210.github.io/}{\raisebox{-0.05\height}\faGlobe\ Homepage}
+\ $|$ \
+\href{https://scholar.google.com/citations?user=UQN24j8AAAAJ\&hl}{\raisebox{-0.05\height}\faUserGraduate\ Scholar}
+\ $|$ \
+\href{mailto:lsh83210@kaist.ac.kr}{\raisebox{-0.05\height}\faEnvelope\ lsh83210@kaist.ac.kr}
+
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Research Interests}
+
+I am broadly interested in diffusion models, with a current focus on discrete diffusion models and unified multimodal models. My research particularly focuses on improving the efficiency, scalability, and reasoning capabilities of diffusion language models, and on extending them toward unified multimodal models that understand and generate across modalities within a single model.
+
+On the inference side, I am interested in test-time scaling, designing inference algorithms that effectively scale computation at generation time. On the training side, I am interested in modeling, developing architectures and formulations that enable efficient and scalable discrete diffusion learning.
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Experience}
+
+\begin{educationlong}
+{Krafton}
+{2025.06 -- 2026.04}
+{Research Intern, Foundation Research Team}
+{\textit{Seoul, South Korea}}
+{}
+\end{educationlong}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{educationlong}
+{Korea Advanced Institute of Science and Technology (KAIST)}
+{2025.09 -- Present}
+{Integrated M.S.-Ph.D., Kim Jaechul Graduate School of AI}
+{\textit{Daejeon, South Korea}}
+{Advisor: Prof. Seungryong Kim}
+\end{educationlong}
+
+\begin{educationlong}
+{Korea Advanced Institute of Science and Technology (KAIST)}
+{2019.03 -- 2025.09}
+{B.S. in Electronic Engineering, Minor in Mathematical Sciences}
+{\textit{Daejeon, South Korea}}
+{}
+\end{educationlong}
+
+%----------------------------------------------------------------------------------------
+% PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Publications}
+
+% \textit{\textbf{Preprints}}
+
+% \begin{enumerate}
+
+
+% \end{enumerate}
+
+% \vspace{2mm}
+
+\textit{\textbf{International Conference}}
+
+\begin{enumerate}
+\item \textbf{Sanghyun Lee}, Chunsan Hong, Seungryong Kim, Jonghyun Lee, Jongho Park, Dongmin Park.
+\textbf{``Looped Diffusion Language Models''}
+\begin{flushright}\vspace{-7pt}
+\textit{Advances in Neural Information Processing Systems (NeurIPS), 2026.}
+\href{https://arxiv.org/pdf/2605.26106}{[link]}
+\end{flushright}
+
+\item Chunsan Hong$^\ast$, \textbf{Sanghyun Lee}$^\ast$, Chieh-Hsin Lai, S. Hayakawa, Y. Takida, Yuki Mitsufuji, Seungryong Kim, J.C. Ye.
+\textbf{``Understanding and Accelerating the Training of Masked Diffusion Language Models''}
+\begin{flushright}\vspace{-7pt}
+\textit{International Conference on Machine Learning (ICML) workshop, 2026.}
+\href{https://arxiv.org/abs/2605.13026}{[link]}
+\end{flushright}
+\item \textbf{Sanghyun Lee}, Seungryong Kim, Jongho Park, Dongmin Park.
+\textbf{``Lookahead Unmasking Elicits Accurate Decoding in Diffusion Language Models''}
+\begin{flushright}\vspace{-7pt}
+\textit{International Conference on Machine Learning (ICML), 2026.}
+\href{https://arxiv.org/pdf/2511.05563}{[link]}
+\end{flushright}
+
+\item Chunsan Hong, \textbf{Sanghyun Lee}, J.C. Ye.
+\textbf{``Unifying Masked Diffusion Models with Various Generation Orders and Beyond''}
+\begin{flushright}\vspace{-7pt}
+\textit{International Conference on Machine Learning (ICML), 2026. Spotlight Paper (Acceptance rate $<$ 2.2\%).}
+\href{https://arxiv.org/abs/2602.02112}{[link]}
+\end{flushright}
+
+\item \textbf{Sanghyun Lee}, Sunwoo Kim, Seungryong Kim, Jongho Park, Dongmin Park.
+\textbf{``Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement''}
+\begin{flushright}\vspace{-7pt}
+\textit{International Conference on Machine Learning (ICML) workshop, 2026.}
+\href{https://arxiv.org/pdf/2511.05562}{[link]}
+\end{flushright}
+
+\item Donghoon Ahn$^\ast$, Jiwon Kang$^\ast$, \textbf{Sanghyun Lee}, Jaewon Min, Minjae Kim, Wooseok Jang, Hyoungwon Cho, Sayak Paul, SeonHwa Kim, Eunju Cha, Kyong Hwan Jin, Seungryong Kim.
+\textbf{``A Noise Is Worth Diffusion Guidance''}
+\begin{flushright}\vspace{-7pt}
+\textit{International Conference on Learning Representations (ICLR), 2026.}
+\href{https://arxiv.org/pdf/2412.03895}{[link]}
+\end{flushright}
+
+\item Donghoon Ahn$^\ast$, Jiwon Kang$^\ast$, \textbf{Sanghyun Lee}, Minjae Kim, Jaewon Min, Wooseok Jang, Sangwu Lee, Sayak Paul, Susung Hong, Seungryong Kim.
+\textbf{``Fine-Grained Perturbation Guidance via Attention Head Selection''}
+\begin{flushright}\vspace{-7pt}
+\textit{Advances in Neural Information Processing Systems (NeurIPS), 2025.}
+\href{https://arxiv.org/pdf/2506.10978}{[link]}
+\end{flushright}
+
+
+
+\end{enumerate}
+
+%----------------------------------------------------------------------------------------
+% RESEARCH AREAS
+%----------------------------------------------------------------------------------------
+
+\section{Research Areas}
+
+\begin{itemize}
+    \item Discrete diffusion models
+    \item Unified multimodal models
+    \item Test-time scaling
+    \item Probabilistic modeling
+    \item Efficient from-scratch pretraining
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Skills}
+
+\begin{itemize}
+
+    \item \textbf{Programming and Systems:} Python, PyTorch, C/C++, CUDA
+    \item \textbf{Large-Scale Training Experience:}
+    \begin{itemize}
+        \item Billion-scale language model and unified multimodal model from-scratch pretraining
+        \item Training experience on multi-GPU clusters
+    \end{itemize}
+
+    \item \textbf{Academic Knowledge:}
+    Diffusion Models, Reinforcement Learning Theory, Information Theory, Linear Algebra, MC Methods, Optimization Theory, Measure Theory, Real Analysis
+
+\end{itemize}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

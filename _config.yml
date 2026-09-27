@@ -24,7 +24,7 @@ position: Integrated MS-PhD Student
 email: lsh83210@kaist.ac.kr
 description: |
   I am an Integrated MS-PhD Student at [KAIST CVLAB](https://cvlab.kaist.ac.kr/), advised by [Seungryong Kim](https://cvlab.kaist.ac.kr/members/faculty).
-  I am broadly interested in diffusion models, with a current focus on **discrete diffusion models for text generation**.
+  I am broadly interested in diffusion models, with a current focus on **discrete diffusion models** and **unified multimodal models**.
   On the inference side, I am particularly interested in **test-time scaling**, efficiently scaling compute at inference time.
   Separately, on the training side, I am drawn to **modeling**, designing architectures and formulations that make these capabilities possible.
 
