@@ -2,6 +2,8 @@
   image: "pubs/looped_diffusion_language_models.jpg"
   title: "Looped Diffusion Language Models"
   venue: "NeurIPS, 2026"
+  awards:
+    - "COLM workshop, 2026 (Spotlight)"
   description: ""
   arxiv: 2605.26106
   authors:

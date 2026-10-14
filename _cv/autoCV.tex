@@ -88,9 +88,9 @@
 
 \section{Research Interests}
 
-I am broadly interested in diffusion models, with a current focus on discrete diffusion models and unified multimodal models. My research particularly focuses on improving the efficiency, scalability, and reasoning capabilities of diffusion language models, and on extending them toward unified multimodal models that understand and generate across modalities within a single model.
+My research is rooted in diffusion language models, with a current focus on discrete diffusion models and unified multimodal models. The question that connects my work is how model design should adapt to each modeling paradigm and modality: rather than adopting components developed for autoregressive models, I study architectures, tokenization, and representations that build on the properties of the diffusion process itself.
 
-On the inference side, I am interested in test-time scaling, designing inference algorithms that effectively scale computation at generation time. On the training side, I am interested in modeling, developing architectures and formulations that enable efficient and scalable discrete diffusion learning.
+On the training side, I am interested in efficient and scalable training methods for new modeling paradigms, including billion-scale pretraining from scratch, and in understanding when a shared generative formulation creates synergy across language and vision. On the inference side, I am interested in test-time scaling, designing inference algorithms that effectively scale computation at generation time.
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
@@ -134,14 +134,27 @@ On the inference side, I am interested in test-time scaling, designing inference
 
 \section{Publications}
 
-% \textit{\textbf{Preprints}}
+\textit{\textbf{Preprints}}
 
-% \begin{enumerate}
+\begin{enumerate}
+\item \textbf{``Rethinking Tokenization for Discrete Diffusion Language Models''}
+\begin{flushright}\vspace{-7pt}
+\textit{Under review. arXiv preprint coming soon.}
+\end{flushright}
 
+\item \textbf{``Exploring Unified Latent Diffusion for Multimodal Modeling''}
+\begin{flushright}\vspace{-7pt}
+\textit{Under review. arXiv preprint coming soon.}
+\end{flushright}
 
-% \end{enumerate}
+\item \textbf{``ReAnchor: Reusing Rejected States as Anchors for Diffusion Speculative Decoding''}
+\begin{flushright}\vspace{-7pt}
+\textit{Under review. arXiv preprint coming soon.}
+\end{flushright}
 
-% \vspace{2mm}
+\end{enumerate}
+
+\vspace{2mm}
 
 \textit{\textbf{International Conference}}
 
@@ -151,6 +164,8 @@ On the inference side, I am interested in test-time scaling, designing inference
 \begin{flushright}\vspace{-7pt}
 \textit{Advances in Neural Information Processing Systems (NeurIPS), 2026.}
 \href{https://arxiv.org/pdf/2605.26106}{[link]}
+\\
+\textit{Conference on Language Modeling (COLM) workshop, 2026. Spotlight Paper.}
 \end{flushright}
 
 \item Chunsan Hong$^\ast$, \textbf{Sanghyun Lee}$^\ast$, Chieh-Hsin Lai, S. Hayakawa, Y. Takida, Yuki Mitsufuji, Seungryong Kim, J.C. Ye.
@@ -173,6 +188,7 @@ On the inference side, I am interested in test-time scaling, designing inference
 \href{https://arxiv.org/abs/2602.02112}{[link]}
 \end{flushright}
 
+\pagebreak
 \item \textbf{Sanghyun Lee}, Sunwoo Kim, Seungryong Kim, Jongho Park, Dongmin Park.
 \textbf{``Effective Test-Time Scaling of Discrete Diffusion through Iterative Refinement''}
 \begin{flushright}\vspace{-7pt}
