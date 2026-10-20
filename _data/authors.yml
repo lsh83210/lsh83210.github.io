@@ -79,3 +79,18 @@ jpark:
 dpark:
   first_name: Dongmin
   last_name: Park
+wnam:
+  first_name: Wonjin
+  last_name: Nam
+sjang:
+  first_name: Seungho
+  last_name: Jang
+jaeholee:
+  first_name: Jaeho
+  last_name: Lee
+jihopark:
+  first_name: Jiho
+  last_name: Park
+jaewoonlee:
+  first_name: Jaewoon
+  last_name: Lee

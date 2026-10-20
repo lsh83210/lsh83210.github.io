@@ -1,3 +1,8 @@
+- date: Oct 2026
+  description: >-
+    [_ReAnchor_](https://arxiv.org/abs/2610.26531), a training-free method that speeds up
+    diffusion speculative decoding, is now on arXiv with [code](https://github.com/cvlab-kaist/ReAnchor).
+
 - date: Sep 2026
   description: >-
     [_Looped Diffusion Language Models_](https://arxiv.org/abs/2605.26106) has been accepted to **NeurIPS 2026**.

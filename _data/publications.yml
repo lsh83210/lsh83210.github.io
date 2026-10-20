@@ -1,3 +1,22 @@
+- id: reanchor
+  image: "pubs/reanchor.jpg"
+  title: "ReAnchor: Reusing Rejected Verifier States for Diffusion Drafting"
+  venue: "arXiv, 2026"
+  description: ""
+  arxiv: 2610.26531
+  github: cvlab-kaist/ReAnchor
+  equal_contributors:
+    - sanghyun
+    - wnam
+  authors:
+    - sanghyun
+    - wnam
+    - sjang
+    - jaeholee
+    - jihopark
+    - jaewoonlee
+    - shkim
+
 - id: looped_diffusion_language_models
   image: "pubs/looped_diffusion_language_models.jpg"
   title: "Looped Diffusion Language Models"
